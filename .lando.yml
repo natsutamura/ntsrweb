@@ -1,0 +1,24 @@
+name: ntsr
+services:
+  node:
+    type: node:18
+    scanner: false
+    overrides:
+      ports:
+        - "5173:5173"
+tooling:
+  node:
+    service: node
+  npm:
+    service: node
+  npx:
+    service: node
+  dev:
+    service: node
+    cmd: npm run dev
+  build:
+    service: node
+    cmd: npm run build
+  serve:
+    service: node
+    cmd: npm run serve
